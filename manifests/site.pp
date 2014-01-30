@@ -88,3 +88,28 @@ node default {
     target => $boxen::config::repodir
   }
 }
+
+
+
+include chrome
+
+include qt
+include evernote
+include mplayerx
+include transmit
+include skype
+include quicksilver
+include transmission
+include onepassword
+include iterm2::stable
+include dropbox
+include istatmenus4
+include daisy_disk
+include onyx
+include macvim
+include handbrake
+include linkinus
+include caffeine
+include better_touch_tools
+include teamviewer
+

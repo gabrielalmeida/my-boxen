@@ -1,0 +1,44 @@
+class people::gabrielalmeida::default {
+
+include chrome
+include chrome::beta
+include chrome::dev
+include chrome::canary
+
+include qt
+include evernote
+include mplayerx
+include transmit
+include skype
+include quicksilver
+include transmission
+include iterm2
+include onepassword
+include dropbox
+include istatmenus4
+include daisy_disk
+include onyx
+include macvim
+include handbrake
+include linkinus
+include caffeine
+include better_touch_tools
+include teamviewer
+
+
+
+
+
+  $home     = "/Users/${::boxen_user}"
+  $my       = "${home}/Dev"
+  $dotfiles = "${my}/dotfiles"
+
+  file { $my:
+    ensure  => directory
+  }
+
+  repository { $dotfiles:
+    source  => 'gabrielalmeida/dotfiles',
+    require => File[$my]
+  }
+}
